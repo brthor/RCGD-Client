@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript" src="/jwplayer/jwplayer.js"></script>
+<script type="text/javascript">jwplayer.key="cM2DiXVSfs9ZSE43vypjL94xX8oeQXiN07F6TA==";</script>
+</head>
+
+<body>
+<div id="player">Loading the player...</div>
+
+<script type="text/javascript">
+    jwplayer("player").setup({
+   	sources: [{
+            file: "rtmp://1d1589.entrypoint.cloud.wowza.com:1935/app-ebe1/6ea99c5d"
+        }],
+        rtmp: {
+        	bufferlength: .1
+    	},
+    });
+
+    	jwplayer("player").onError ( function(event) {
+			setTimeout(function()
+			{
+				jwplayer("player").play(true);
+			},2000);
+		}
+	);
+
+</script>
+</body>
+</html>

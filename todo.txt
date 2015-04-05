@@ -1,0 +1,4 @@
+[x] Get Xbox Controller Support on the mac
+[ ] Send Live Controller Data To Server
+[ ] Present Live Streaming Video
+[ ] 
