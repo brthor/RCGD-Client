@@ -8,11 +8,12 @@ connect().use(serveStatic('www')).listen(8080);
 var net = require('net')
 //var auth = require('rcgdauth')
 
-var serverHost = '0.0.0.0'
+var serverHost = '  rcgd.cloudapp.net'
 var serverPort = 6969
 
 var client = new net.Socket();
 client.connect(serverPort, serverHost,function(){
+  console.log("Connected to Server!");
 	//auth.authorize(client);
 });
 
@@ -24,6 +25,11 @@ client.on('data', function(data) {
     client.destroy();
     
 });
+
+client.on('error', function(data){
+    console.log("ERRORS!!!");
+    console.log(data);
+  });
 
 // Add a 'close' event handler for the client socket
 client.on('close', function() {
@@ -37,7 +43,9 @@ var xbox = new XboxController;
 
 function writeData(data){
 	data['clientType'] = 'c'
-	client.write(data)
+  console.log(data)
+	client.write(JSON.stringify(data) + '\n');
+  console.log("wtf")
 }
 
 xbox.on('a:press', function (key) {
@@ -77,5 +85,5 @@ xbox.on('left:move', function(position){
 
 xbox.on('right:move', function(position){
 	console.log('right:move', position);
-  	client.write({'id': 'RIGHT_STICK', 'value':position});
+  	writeData({'id': 'RIGHT_STICK', 'value':position});
  });
