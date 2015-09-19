@@ -9,5 +9,8 @@ RCGD is an unlimited range ground drone constructed from a cheap remote control 
 We replaced the electronics with an Intel Edison, mounted a phone on the car, and used these systems to control it:
 
 [RCGD Android App](https://github.com/Mozoby/RCGD-Android-App)
+
 [RCGD Server](https://github.com/Mozoby/RCGD-Server)
+
 [RCGD Control Code](https://github.com/Mozoby/RCGD-Edison)
+
