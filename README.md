@@ -1,8 +1,13 @@
 # RCGD-Client
-Remote Control Ground Drone
+Remote Control Ground Drone Client
 
-This project was created as a part of LA Hacks 2015. We successfully turned a cheap remote control car into an unlimited range ground drone.
+This is a node client app for controlling the RCGD. It supports driving the drone with an xbox controller plugged into your local computer, and streaming live video from the drone.
 
-It is a node.js client for using an xbox controller on the client machine and receiving streaming video.
+## What is RCGD?
+RCGD is an unlimited range ground drone constructed from a cheap remote control car.
 
-The node.js program hosts a web page with jwplayer, which streams from the ground drone.
+We replaced the electronics with an Intel Edison, mounted a phone on the car, and used these systems to control it:
+
+[RCGD Android App](https://github.com/Mozoby/RCGD-Android-App)
+[RCGD Server](https://github.com/Mozoby/RCGD-Server)
+[RCGD Control Code](https://github.com/Mozoby/RCGD-Edison)
